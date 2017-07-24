@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
+    <title>Scraping Deals With Mongoose</title>
+  </head>
+  <body>
+
+  <nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">DealsScraping</a>
+    </div>
+    <form action="/scrape" method="GET">
+      <button type="submit" class="btn btn-danger navbar-btn" id="scrapeButton" >Scrape</button>
+    </form>
+    
+  </div>
+</nav>
+
+  <div class="container">
+    <h3>List of Deals</h3>
+    <div class="row">
+      <div class="col-md-8">       
+
+        {{{body}}}
+      
+      </div>
+      <div class="col-md-4">
+        <div id="notes"> </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <script src="/assets/js/app.js"></script>
+  
+  </body>
+</html>

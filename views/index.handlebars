@@ -1,0 +1,22 @@
+
+<div id="articles">
+
+    {{#each results}}
+
+    <div class="panel-group">
+
+        <div class="panel panel-default">
+                 
+            <div class="panel-heading"><a href="#"><p data-id="{{this._id}}">{{this.title}}</p></a></div>
+        
+            <div class="panel-body"><a href="{{this.link}}" target="_blank">{{this.link}}</a>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+    {{/each}}
+
+</div>
