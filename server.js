@@ -25,9 +25,16 @@ app.use(bodyParser.urlencoded({
 
 // Make public a static dir
 app.use(express.static("public"));
+var databaseUri = "mongodb://localhost/scrapeweb";
 
-// Database configuration with mongoose
-mongoose.connect("mongodb://localhost/scrapeweb");
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+
+}
+else {
+  mongoose.connect(databaseUri);
+}
+
 var db = mongoose.connection;
 
 // Show any mongoose errors
